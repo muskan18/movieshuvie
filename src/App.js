@@ -1,11 +1,14 @@
 import './App.css';
 import Row from './Components/Row/Row';
+import Navbar from './Components/Navbar/Navbar';
+import Banner from './Components/Banner/Banner';
 import requests from './requests';
 function App() {
   return (
     <div className="App">
-     <h1>Hi lets build netflix clone:)</h1>
-     <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals}/>
+      <Navbar/>
+      <Banner />
+     <Row title="Netflix Originals" fetchUrl={requests.fetchNetflixOriginals} isLargeRow={true}/>
      <Row title="Trending Now" fetchUrl={requests.fetchTrending}/>
      <Row title="Top Rated" fetchUrl={requests.fetchTopRated}/>
      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies}/>
